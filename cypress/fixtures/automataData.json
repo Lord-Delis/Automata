@@ -1,0 +1,23 @@
+{
+  "valid_login_data": {
+    "password": "@Christ247Automata",
+    "username": "newmaker@gmail.com",
+    "welcomeMessage": "Welcome to Onafriq"
+  },
+
+  "invalid_login_data": {
+    "password": "@Christ247Automata",
+    "username": "newmaker1234@gmail.com",
+    "loginError": "Invalid Username Or Password"
+  },
+
+  "cardProgram_data": {
+    "cardProgramName": "chippercash",
+    "urlContent": "card-programs/history"
+  },
+
+  "role_data": {
+    "urlContent": "role-management/home"
+  }
+  
+}
