@@ -7,8 +7,7 @@ before(function () {
 
 beforeEach(function () {
     cy.log('This should execute before each test case'),
-    cy.visit('/'),
-    cy.validLogin()
+    cy.visit('/')
 })
 
 after(function () {

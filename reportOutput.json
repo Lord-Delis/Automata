@@ -2,23 +2,23 @@
   "stats": {
     "suites": 3,
     "tests": 4,
-    "passes": 3,
+    "passes": 2,
     "pending": 0,
-    "failures": 1,
+    "failures": 2,
     "testsRegistered": 4,
-    "passPercent": 75,
+    "passPercent": 50,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false,
-    "start": "2024-06-12T14:28:42.367Z",
-    "end": "2024-06-12T14:30:57.310Z",
-    "duration": 134943
+    "start": "2024-06-12T17:56:05.015Z",
+    "end": "2024-06-12T17:57:48.428Z",
+    "duration": 103413
   },
   "results": [
     {
-      "uuid": "16a34199-93df-4781-b7bd-2f00c97506bd",
+      "uuid": "307ec3be-3385-484a-954f-531b8171b338",
       "title": "",
       "fullFile": "cypress\\e2e\\login.cy.js",
       "file": "cypress\\e2e\\login.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "a4084f0e-3674-44a4-9d58-4e7a6928814d",
+          "uuid": "3e34d5f0-b420-45ac-a8c8-c6a1b8a72de3",
           "title": "All Login Tests",
           "fullFile": "",
           "file": "",
@@ -38,25 +38,29 @@
               "title": "should login with valid username and password",
               "fullTitle": "All Login Tests should login with valid username and password",
               "timedOut": null,
-              "duration": 15465,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
+              "duration": 31479,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
               "pending": false,
               "context": null,
               "code": "cy.validLogin();",
-              "err": {},
-              "uuid": "da79383b-d27a-468a-82ae-12c6cd92326c",
-              "parentUUID": "a4084f0e-3674-44a4-9d58-4e7a6928814d",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 20000ms: Expected to find element: `:nth-child(2) > .group-input > .form-control`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 20000ms: Expected to find element: `:nth-child(2) > .group-input > .form-control`, but never found it.\n    at LoginPage.emailInput (webpack://automata_project/./cypress/pages/login_page.js:5:18)\n    at Context.eval (webpack://automata_project/./cypress/support/commands.js:16:16)",
+                "diff": null
+              },
+              "uuid": "d3fc2061-ccf2-4394-b850-d5a00bd75378",
+              "parentUUID": "3e34d5f0-b420-45ac-a8c8-c6a1b8a72de3",
               "isHook": false,
               "skipped": false
             },
             {
-              "title": "should login with invalid username and password",
-              "fullTitle": "All Login Tests should login with invalid username and password",
+              "title": "should not login with invalid username and password",
+              "fullTitle": "All Login Tests should not login with invalid username and password",
               "timedOut": null,
-              "duration": 28868,
+              "duration": 30516,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -65,26 +69,25 @@
               "context": null,
               "code": "cy.invalidLogin();",
               "err": {
-                "message": "AssertionError: Timed out retrying after 20000ms: Expected to find element: `.display-3`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 20000ms: Expected to find element: `.display-3`, but never found it.\n    at Context.eval (webpack://automata_project/./cypress/support/commands.js:27:36)",
+                "message": "AssertionError: Timed out retrying after 20000ms: Expected to find element: `:nth-child(2) > .group-input > .form-control`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 20000ms: Expected to find element: `:nth-child(2) > .group-input > .form-control`, but never found it.\n    at LoginPage.emailInput (webpack://automata_project/./cypress/pages/login_page.js:5:18)\n    at Context.eval (webpack://automata_project/./cypress/support/commands.js:24:16)",
                 "diff": null
               },
-              "uuid": "0c607b66-dab9-4f0e-9568-4d694af31557",
-              "parentUUID": "a4084f0e-3674-44a4-9d58-4e7a6928814d",
+              "uuid": "a1cf1a75-bbd5-47e4-8313-f67e78f1a2a9",
+              "parentUUID": "3e34d5f0-b420-45ac-a8c8-c6a1b8a72de3",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [
-            "da79383b-d27a-468a-82ae-12c6cd92326c"
-          ],
+          "passes": [],
           "failures": [
-            "0c607b66-dab9-4f0e-9568-4d694af31557"
+            "d3fc2061-ccf2-4394-b850-d5a00bd75378",
+            "a1cf1a75-bbd5-47e4-8313-f67e78f1a2a9"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 44333,
+          "duration": 61995,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -100,7 +103,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "3904e979-e361-4546-87f8-9bdb7cdc0caa",
+      "uuid": "ed635c56-fb9c-48ca-9a0c-14a2e5c13bef",
       "title": "",
       "fullFile": "cypress\\e2e\\roleTest.cy.js",
       "file": "cypress\\e2e\\roleTest.cy.js",
@@ -109,7 +112,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "3a673089-0d8d-4175-92a6-9ef3c0f520a0",
+          "uuid": "ec5c8fb9-9c2a-4ee7-9eb5-829f4e93c77b",
           "title": "All Role Tests",
           "fullFile": "",
           "file": "",
@@ -120,29 +123,29 @@
               "title": "should view role details",
               "fullTitle": "All Role Tests should view role details",
               "timedOut": null,
-              "duration": 55587,
+              "duration": 13558,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "cy.validLogin();\ncy.viewAllRoles();",
+              "code": "// cy.validLogin()\ncy.viewAllRoles();",
               "err": {},
-              "uuid": "b1d36ae6-8293-4a02-94a1-7fd92e85a9e0",
-              "parentUUID": "3a673089-0d8d-4175-92a6-9ef3c0f520a0",
+              "uuid": "6beb8204-7488-4faa-8c9f-d3d7deee608d",
+              "parentUUID": "ec5c8fb9-9c2a-4ee7-9eb5-829f4e93c77b",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "b1d36ae6-8293-4a02-94a1-7fd92e85a9e0"
+            "6beb8204-7488-4faa-8c9f-d3d7deee608d"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 55587,
+          "duration": 13558,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -158,7 +161,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "99540774-f49e-446b-8ece-1e03494013fb",
+      "uuid": "35b8332f-c299-4bc6-9a96-75d63c626eb7",
       "title": "",
       "fullFile": "cypress\\e2e\\cardProgramTest.cy.js",
       "file": "cypress\\e2e\\cardProgramTest.cy.js",
@@ -167,7 +170,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "66672960-e8d4-434e-bbdf-5ea0251325de",
+          "uuid": "544cdc7f-65cf-47c8-ac8c-57bb581f3a4d",
           "title": "Card program test cases",
           "fullFile": "",
           "file": "",
@@ -178,29 +181,29 @@
               "title": "Search card program",
               "fullTitle": "Card program test cases Search card program",
               "timedOut": null,
-              "duration": 31228,
+              "duration": 19135,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "cy.validLogin();\ncy.searchCardPrograms();",
+              "code": "//cy.validLogin()\ncy.searchCardPrograms();",
               "err": {},
-              "uuid": "53edd15a-bebb-4e0d-aa9a-0a3e782ddac6",
-              "parentUUID": "66672960-e8d4-434e-bbdf-5ea0251325de",
+              "uuid": "1d1e7356-ad96-4689-8800-3114a15ef493",
+              "parentUUID": "544cdc7f-65cf-47c8-ac8c-57bb581f3a4d",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "53edd15a-bebb-4e0d-aa9a-0a3e782ddac6"
+            "1d1e7356-ad96-4689-8800-3114a15ef493"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 31228,
+          "duration": 19135,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

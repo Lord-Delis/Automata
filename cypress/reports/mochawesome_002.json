@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2024-06-12T14:30:01.631Z",
-    "end": "2024-06-12T14:30:57.310Z",
-    "duration": 55679,
+    "start": "2024-06-12T17:57:34.670Z",
+    "end": "2024-06-12T17:57:48.428Z",
+    "duration": 13758,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "3904e979-e361-4546-87f8-9bdb7cdc0caa",
+      "uuid": "ed635c56-fb9c-48ca-9a0c-14a2e5c13bef",
       "title": "",
       "fullFile": "cypress\\e2e\\roleTest.cy.js",
       "file": "cypress\\e2e\\roleTest.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "3a673089-0d8d-4175-92a6-9ef3c0f520a0",
+          "uuid": "ec5c8fb9-9c2a-4ee7-9eb5-829f4e93c77b",
           "title": "All Role Tests",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,29 @@
               "title": "should view role details",
               "fullTitle": "All Role Tests should view role details",
               "timedOut": null,
-              "duration": 55587,
+              "duration": 13558,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "cy.validLogin();\ncy.viewAllRoles();",
+              "code": "// cy.validLogin()\ncy.viewAllRoles();",
               "err": {},
-              "uuid": "b1d36ae6-8293-4a02-94a1-7fd92e85a9e0",
-              "parentUUID": "3a673089-0d8d-4175-92a6-9ef3c0f520a0",
+              "uuid": "6beb8204-7488-4faa-8c9f-d3d7deee608d",
+              "parentUUID": "ec5c8fb9-9c2a-4ee7-9eb5-829f4e93c77b",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "b1d36ae6-8293-4a02-94a1-7fd92e85a9e0"
+            "6beb8204-7488-4faa-8c9f-d3d7deee608d"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 55587,
+          "duration": 13558,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

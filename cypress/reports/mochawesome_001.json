@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 2,
-    "passes": 1,
+    "passes": 0,
     "pending": 0,
-    "failures": 1,
-    "start": "2024-06-12T14:29:15.416Z",
-    "end": "2024-06-12T14:29:59.926Z",
-    "duration": 44510,
+    "failures": 2,
+    "start": "2024-06-12T17:56:28.115Z",
+    "end": "2024-06-12T17:57:30.646Z",
+    "duration": 62531,
     "testsRegistered": 2,
-    "passPercent": 50,
+    "passPercent": 0,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "16a34199-93df-4781-b7bd-2f00c97506bd",
+      "uuid": "307ec3be-3385-484a-954f-531b8171b338",
       "title": "",
       "fullFile": "cypress\\e2e\\login.cy.js",
       "file": "cypress\\e2e\\login.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "a4084f0e-3674-44a4-9d58-4e7a6928814d",
+          "uuid": "3e34d5f0-b420-45ac-a8c8-c6a1b8a72de3",
           "title": "All Login Tests",
           "fullFile": "",
           "file": "",
@@ -38,25 +38,29 @@
               "title": "should login with valid username and password",
               "fullTitle": "All Login Tests should login with valid username and password",
               "timedOut": null,
-              "duration": 15465,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
+              "duration": 31479,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
               "pending": false,
               "context": null,
               "code": "cy.validLogin();",
-              "err": {},
-              "uuid": "da79383b-d27a-468a-82ae-12c6cd92326c",
-              "parentUUID": "a4084f0e-3674-44a4-9d58-4e7a6928814d",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 20000ms: Expected to find element: `:nth-child(2) > .group-input > .form-control`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 20000ms: Expected to find element: `:nth-child(2) > .group-input > .form-control`, but never found it.\n    at LoginPage.emailInput (webpack://automata_project/./cypress/pages/login_page.js:5:18)\n    at Context.eval (webpack://automata_project/./cypress/support/commands.js:16:16)",
+                "diff": null
+              },
+              "uuid": "d3fc2061-ccf2-4394-b850-d5a00bd75378",
+              "parentUUID": "3e34d5f0-b420-45ac-a8c8-c6a1b8a72de3",
               "isHook": false,
               "skipped": false
             },
             {
-              "title": "should login with invalid username and password",
-              "fullTitle": "All Login Tests should login with invalid username and password",
+              "title": "should not login with invalid username and password",
+              "fullTitle": "All Login Tests should not login with invalid username and password",
               "timedOut": null,
-              "duration": 28868,
+              "duration": 30516,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -65,26 +69,25 @@
               "context": null,
               "code": "cy.invalidLogin();",
               "err": {
-                "message": "AssertionError: Timed out retrying after 20000ms: Expected to find element: `.display-3`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 20000ms: Expected to find element: `.display-3`, but never found it.\n    at Context.eval (webpack://automata_project/./cypress/support/commands.js:27:36)",
+                "message": "AssertionError: Timed out retrying after 20000ms: Expected to find element: `:nth-child(2) > .group-input > .form-control`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 20000ms: Expected to find element: `:nth-child(2) > .group-input > .form-control`, but never found it.\n    at LoginPage.emailInput (webpack://automata_project/./cypress/pages/login_page.js:5:18)\n    at Context.eval (webpack://automata_project/./cypress/support/commands.js:24:16)",
                 "diff": null
               },
-              "uuid": "0c607b66-dab9-4f0e-9568-4d694af31557",
-              "parentUUID": "a4084f0e-3674-44a4-9d58-4e7a6928814d",
+              "uuid": "a1cf1a75-bbd5-47e4-8313-f67e78f1a2a9",
+              "parentUUID": "3e34d5f0-b420-45ac-a8c8-c6a1b8a72de3",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [
-            "da79383b-d27a-468a-82ae-12c6cd92326c"
-          ],
+          "passes": [],
           "failures": [
-            "0c607b66-dab9-4f0e-9568-4d694af31557"
+            "d3fc2061-ccf2-4394-b850-d5a00bd75378",
+            "a1cf1a75-bbd5-47e4-8313-f67e78f1a2a9"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 44333,
+          "duration": 61995,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

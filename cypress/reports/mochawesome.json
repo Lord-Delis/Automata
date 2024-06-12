@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2024-06-12T14:28:42.367Z",
-    "end": "2024-06-12T14:29:13.685Z",
-    "duration": 31318,
+    "start": "2024-06-12T17:56:05.015Z",
+    "end": "2024-06-12T17:56:24.357Z",
+    "duration": 19342,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "99540774-f49e-446b-8ece-1e03494013fb",
+      "uuid": "35b8332f-c299-4bc6-9a96-75d63c626eb7",
       "title": "",
       "fullFile": "cypress\\e2e\\cardProgramTest.cy.js",
       "file": "cypress\\e2e\\cardProgramTest.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "66672960-e8d4-434e-bbdf-5ea0251325de",
+          "uuid": "544cdc7f-65cf-47c8-ac8c-57bb581f3a4d",
           "title": "Card program test cases",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,29 @@
               "title": "Search card program",
               "fullTitle": "Card program test cases Search card program",
               "timedOut": null,
-              "duration": 31228,
+              "duration": 19135,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "cy.validLogin();\ncy.searchCardPrograms();",
+              "code": "//cy.validLogin()\ncy.searchCardPrograms();",
               "err": {},
-              "uuid": "53edd15a-bebb-4e0d-aa9a-0a3e782ddac6",
-              "parentUUID": "66672960-e8d4-434e-bbdf-5ea0251325de",
+              "uuid": "1d1e7356-ad96-4689-8800-3114a15ef493",
+              "parentUUID": "544cdc7f-65cf-47c8-ac8c-57bb581f3a4d",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "53edd15a-bebb-4e0d-aa9a-0a3e782ddac6"
+            "1d1e7356-ad96-4689-8800-3114a15ef493"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 31228,
+          "duration": 19135,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
