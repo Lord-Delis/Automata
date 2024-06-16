@@ -14,6 +14,12 @@ jobs:
       - name: Electron browser test result
         run: |
           echo "This is the test result on Electron browser" >> $GITHUB_STEP_SUMMARY
+
+      - name: Generate Test Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: Mochawesome HTML Report
+          path: cypress/reports/html
       
       # Chrome browser test
       - name: Execute all test cases on Chrome browser
@@ -25,6 +31,12 @@ jobs:
         run: |
             echo "This is the test result on Chrome browser" >> $GITHUB_STEP_SUMMARY
 
+      - name: Generate Test Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: Mochawesome HTML Report
+          path: cypress/reports/html
+
       # Edge browser test
       - name: Execute all test cases On Edge browser
         uses: cypress-io/github-action@v6
@@ -34,6 +46,12 @@ jobs:
       - name: Edge browser test result
         run: |
             echo "This is the test result on Edge browser" >> $GITHUB_STEP_SUMMARY
+
+      - name: Generate Test Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: Mochawesome HTML Report
+          path: cypress/reports/html
 
       # Firefox browser test
       - name: Execute all test cases On Firefox browser
