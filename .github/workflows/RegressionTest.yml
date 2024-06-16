@@ -2,6 +2,7 @@ name: End to end tests
 on: push
 jobs:
   Regression_tests:
+    if: always()
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
