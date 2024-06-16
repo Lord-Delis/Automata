@@ -14,10 +14,10 @@ jobs:
         run: |
           echo "This is the test result on Electron browser" >> $GITHUB_STEP_SUMMARY
 
-      - name: Generate Test Report
+      - name: Generate Electron test Report
         uses: actions/upload-artifact@v4
         with:
-          name: Mochawesome HTML Report
+          name: Electron test Report
           path: cypress/reports/html
 
   Chrome_Regression_tests:
@@ -35,10 +35,10 @@ jobs:
         run: |
             echo "This is the test result on Chrome browser" >> $GITHUB_STEP_SUMMARY
 
-      - name: Generate Test Report
+      - name: Generate Chrome test Report
         uses: actions/upload-artifact@v4
         with:
-          name: Mochawesome HTML Report
+          name: Chrome test Report
           path: cypress/reports/html
 
   Edge_Regression_tests:
@@ -56,10 +56,10 @@ jobs:
         run: |
             echo "This is the test result on Edge browser" >> $GITHUB_STEP_SUMMARY
 
-      - name: Generate Test Report
+      - name: Generate Edge test Report
         uses: actions/upload-artifact@v4
         with:
-          name: Mochawesome HTML Report
+          name: Edge test Report
           path: cypress/reports/html
 
   Firefox_Regression_tests:
@@ -77,8 +77,8 @@ jobs:
         run: |
               echo "This is the test result on Firefox browser" >> $GITHUB_STEP_SUMMARY
 
-      - name: Generate Test Report
+      - name: Generate Firefox test Report
         uses: actions/upload-artifact@v4
         with:
-          name: Mochawesome HTML Report
+          name: Firefox test Report
           path: cypress/reports/html
