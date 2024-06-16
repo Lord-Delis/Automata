@@ -12,6 +12,7 @@ jobs:
         uses: cypress-io/github-action@v6
 
       - name: Electron browser test result
+        if: always()
         run: |
           echo "This is the test result on Electron browser" >> $GITHUB_STEP_SUMMARY
 
@@ -29,6 +30,7 @@ jobs:
           browser: chrome
 
       - name: Chrome browser test result
+        if: always()
         run: |
             echo "This is the test result on Chrome browser" >> $GITHUB_STEP_SUMMARY
 
@@ -46,6 +48,7 @@ jobs:
           browser: edge
 
       - name: Edge browser test result
+        if: always()
         run: |
             echo "This is the test result on Edge browser" >> $GITHUB_STEP_SUMMARY
 
@@ -63,6 +66,7 @@ jobs:
             browser: firefox
 
       - name: Firefox browser test result
+        if: always()
         run: |
               echo "This is the test result on Firefox browser" >> $GITHUB_STEP_SUMMARY
 
