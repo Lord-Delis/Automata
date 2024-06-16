@@ -2,7 +2,6 @@ name: End to end tests
 on: push
 jobs:
   Regression_tests:
-    if: always()
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
@@ -10,6 +9,7 @@ jobs:
 
       # Electron browser test
       - name: Execute all test cases on Electron browser
+        if: always()
         uses: cypress-io/github-action@v6
 
       - name: Electron browser test result
@@ -26,6 +26,7 @@ jobs:
       
       # Chrome browser test
       - name: Execute all test cases on Chrome browser
+        if: always()
         uses: cypress-io/github-action@v6
         with:
           browser: chrome
@@ -44,6 +45,7 @@ jobs:
 
       # Edge browser test
       - name: Execute all test cases On Edge browser
+        if: always()
         uses: cypress-io/github-action@v6
         with:
           browser: edge
@@ -62,6 +64,7 @@ jobs:
 
       # Firefox browser test
       - name: Execute all test cases On Firefox browser
+        if: always()
         uses: cypress-io/github-action@v6
         with:
             browser: firefox
