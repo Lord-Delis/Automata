@@ -16,9 +16,9 @@ jobs:
       - name: Execute all test cases on Chrome browser
         uses: cypress-io/github-action@v6
         with:
-          browser: Chrome
+          browser: chrome
 
       - name: Execute all test cases On Edge browser
         uses: cypress-io/github-action@v6
         with:
-          browser: Edge
+          browser: edge
