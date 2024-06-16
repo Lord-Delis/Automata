@@ -2,6 +2,7 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   reporter: 'cypress-mochawesome-reporter',
+
   e2e: {
    baseUrl: 'https://automata-backoffice-ui.digicoreltds.com/login',
     viewportWidth: 1280,
