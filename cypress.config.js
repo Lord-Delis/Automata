@@ -1,6 +1,7 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
+  reporter: 'cypress-mochawesome-reporter',
   e2e: {
    baseUrl: 'https://automata-backoffice-ui.digicoreltds.com/login',
     viewportWidth: 1280,
@@ -8,14 +9,9 @@ module.exports = defineConfig({
     defaultCommandTimeout: 20000,
     pageLoadTimeout:40000,
     watchForFileChanges: true,
-    reporter: 'mochawesome',
-    reporterOptions: {
-      charts: true,
-      overwrite: false,
-      html: false,
-      json: true,
-      reportDir: 'cypress/reports'
 
+    setupNodeEvents(on, config) {
+      require('cypress-mochawesome-reporter/plugin')(on);
     }
 
     //env: {

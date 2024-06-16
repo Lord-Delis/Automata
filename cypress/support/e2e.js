@@ -1,5 +1,6 @@
 
 import './commands'
+import 'cypress-mochawesome-reporter/register';
 
 before(function () {
     cy.log('This should execute before all test cases')
