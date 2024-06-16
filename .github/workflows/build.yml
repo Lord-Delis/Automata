@@ -12,18 +12,34 @@ jobs:
 
       - name: Execute all test cases on Electron browser
         uses: cypress-io/github-action@v6
+
+      - name: Electron browser test result
+        run: |
+          echo "This is the test result on Electron browser" >> $GITHUB_STEP_SUMMARY
       
       - name: Execute all test cases on Chrome browser
         uses: cypress-io/github-action@v6
         with:
           browser: chrome
 
+      - name: Chrome browser test result
+        run: |
+            echo "This is the test result on Chrome browser" >> $GITHUB_STEP_SUMMARY
+
       - name: Execute all test cases On Edge browser
         uses: cypress-io/github-action@v6
         with:
           browser: edge
 
-      - name: Execute all test cases On Edge browser
+      - name: Edge browser test result
+        run: |
+            echo "This is the test result on Edge browser" >> $GITHUB_STEP_SUMMARY
+
+      - name: Execute all test cases On Firefox browser
         uses: cypress-io/github-action@v6
         with:
             browser: firefox
+
+      - name: Firefox browser test result
+        run: |
+              echo "This is the test result on Firefox browser" >> $GITHUB_STEP_SUMMARY
