@@ -22,3 +22,8 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           browser: edge
+
+      - name: Execute all test cases On Edge browser
+        uses: cypress-io/github-action@v6
+        with:
+            browser: firefox
