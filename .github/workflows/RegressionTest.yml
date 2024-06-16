@@ -16,6 +16,7 @@ jobs:
           echo "This is the test result on Electron browser" >> $GITHUB_STEP_SUMMARY
 
       - name: Generate Electron test Report
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: Electron test Report
@@ -32,6 +33,7 @@ jobs:
             echo "This is the test result on Chrome browser" >> $GITHUB_STEP_SUMMARY
 
       - name: Generate Chrome test Report
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: Chrome test Report
@@ -48,6 +50,7 @@ jobs:
             echo "This is the test result on Edge browser" >> $GITHUB_STEP_SUMMARY
 
       - name: Generate Edge test Report
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: Edge test Report
@@ -64,6 +67,7 @@ jobs:
               echo "This is the test result on Firefox browser" >> $GITHUB_STEP_SUMMARY
 
       - name: Generate Firefox test Report
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: Firefox test Report
