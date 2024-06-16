@@ -1,4 +1,4 @@
-name: End-to-end tests
+name: End to end tests
 on: push
 jobs:
   Regression_tests:
@@ -44,3 +44,9 @@ jobs:
       - name: Firefox browser test result
         run: |
               echo "This is the test result on Firefox browser" >> $GITHUB_STEP_SUMMARY
+
+      - name: Generate Test Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: Mochawesome HTML Report
+          path: cypress/reports/html
