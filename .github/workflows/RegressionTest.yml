@@ -7,9 +7,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Install npm dependencies, cache them correctly
-      # and run all Cypress tests
-
+      # Electron browser test
       - name: Execute all test cases on Electron browser
         uses: cypress-io/github-action@v6
 
@@ -17,6 +15,7 @@ jobs:
         run: |
           echo "This is the test result on Electron browser" >> $GITHUB_STEP_SUMMARY
       
+      # Chrome browser test
       - name: Execute all test cases on Chrome browser
         uses: cypress-io/github-action@v6
         with:
@@ -26,6 +25,7 @@ jobs:
         run: |
             echo "This is the test result on Chrome browser" >> $GITHUB_STEP_SUMMARY
 
+      # Edge browser test
       - name: Execute all test cases On Edge browser
         uses: cypress-io/github-action@v6
         with:
@@ -35,6 +35,7 @@ jobs:
         run: |
             echo "This is the test result on Edge browser" >> $GITHUB_STEP_SUMMARY
 
+      # Firefox browser test
       - name: Execute all test cases On Firefox browser
         uses: cypress-io/github-action@v6
         with:

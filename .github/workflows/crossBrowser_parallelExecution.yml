@@ -1,0 +1,64 @@
+name: Cross Browser Parallet Test Execution
+on: push
+jobs:
+  Electron_Regression_tests:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Electron browser test
+      - name: Execute all test cases on Electron browser
+        uses: cypress-io/github-action@v6
+
+      - name: Electron browser test result
+        run: |
+          echo "This is the test result on Electron browser" >> $GITHUB_STEP_SUMMARY
+
+  Chrome_Regression_tests:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Chrome browser test
+      - name: Execute all test cases on Chrome browser
+        uses: cypress-io/github-action@v6
+        with:
+          browser: chrome
+
+      - name: Chrome browser test result
+        run: |
+            echo "This is the test result on Chrome browser" >> $GITHUB_STEP_SUMMARY
+
+  Edge_Regression_tests:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Edge browser test
+      - name: Execute all test cases On Edge browser
+        uses: cypress-io/github-action@v6
+        with:
+          browser: edge
+
+      - name: Edge browser test result
+        run: |
+            echo "This is the test result on Edge browser" >> $GITHUB_STEP_SUMMARY
+
+  Firefox_Regression_tests:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Firefox browser test
+      - name: Execute all test cases On Firefox browser
+        uses: cypress-io/github-action@v6
+        with:
+            browser: firefox
+
+      - name: Firefox browser test result
+        run: |
+              echo "This is the test result on Firefox browser" >> $GITHUB_STEP_SUMMARY
