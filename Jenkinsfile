@@ -5,7 +5,7 @@ pipeline {
         CYPRESS_CACHE_FOLDER = 'C:\\Users\\hp\\AppData\\Local\\Cypress\\Cache'
         NO_COLOR = 'true'
     }
-    
+
     stages {
         stage('Install dependencies') {
             steps {
@@ -13,6 +13,8 @@ pipeline {
                 script {
                     if (!fileExists("${env.CYPRESS_CACHE_FOLDER}\\13.11.0\\Cypress\\Cypress.exe")) {
                         bat 'npm i'
+                    }else {
+                        echo 'Cypress binary already installed.'
                     }
                 }
             }
