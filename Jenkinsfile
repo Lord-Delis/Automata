@@ -22,6 +22,8 @@ pipeline {
         stage('Install dependencies') {
             steps {
                 echo 'Installing dependencies...'
+            }
+            steps {
                 if (!fileExists("${env.CYPRESS_CACHE_FOLDER}/13.11.0/Cypress/Cypress.exe")) {
                         bat 'npm i'
                     }
