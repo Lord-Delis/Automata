@@ -34,11 +34,11 @@ pipeline {
             }
         }
         stage('Deploying') {
-            always {
                 steps {
-                    echo 'Deploying the application'
+                    always {
+                        echo 'Deploying the application'
+                    }
                 }
-            }
         }
     }
 
