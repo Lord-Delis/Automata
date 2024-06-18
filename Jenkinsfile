@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        CYPRESS_CACHE_FOLDER = "${HOME}/.cache/Cypress"
+        CYPRESS_CACHE_FOLDER = 'C:\\Users\\hp\\AppData\\Local\\Cypress\\Cache'
     }
 
     /**parameters{
@@ -23,7 +23,7 @@ pipeline {
             steps {
                 echo 'Installing dependencies...'
                 script {
-                    if (!fileExists("${env.CYPRESS_CACHE_FOLDER}/13.11.0/Cypress/Cypress.exe")) {
+                    if (!fileExists("${env.CYPRESS_CACHE_FOLDER}\\13.11.0\\Cypress\\Cypress.exe")) {
                         bat 'npm i'
                     }
                 }

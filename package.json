@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-      "allTests": "npx cypress run"
+    "allTests": "npx cypress run"
   },
   "keywords": [],
   "author": "",
