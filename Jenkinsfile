@@ -19,6 +19,14 @@ pipeline {
                 }
             }
         }
+        stage('Check Node.js Version') {
+            steps {
+                echo 'Checking Node.js version...'
+                script {
+                bat 'node -v'
+                }
+            }
+        }
         stage('Testing') {
             steps {
                 echo 'Testing in progress...'
