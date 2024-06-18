@@ -1,6 +1,9 @@
-pipeline{
-
+pipeline {
     agent any
+
+    environment {
+        CYPRESS_CACHE_FOLDER = "${HOME}/.cache/Cypress"
+    }
 
     /**parameters{
         string(
@@ -15,35 +18,40 @@ pipeline{
             )
     }**/
 
-    stages{
-        stage('Building'){
-            steps{
-                echo 'Building the application...'
+    stages {
+        stage('Install dependencies') {
+            steps {
+                echo 'Installing dependencies...'
+                if (!fileExists("${env.CYPRESS_CACHE_FOLDER}/13.11.0/Cypress/Cypress.exe")) {
+                        bat 'npm i'
+                    }
             }
         }
-        stage('Testing'){
-            steps{
-                bat "npm i"
-                bat "npx cypress run"
+        stage('Testing') {
+            steps {
+                echo 'Testing in progress...'
+                bat 'npx cypress run'
             }
         }
-        stage('Deploying'){
-            steps{
-                echo 'Deploying the application'
+        stage('Deploying') {
+            always {
+                steps {
+                    echo 'Deploying the application'
+                }
             }
         }
     }
 
-    post{
+    /**post{
         always{
-            /**script {
+            script {
                 BUILD_USER = getBuildUser()
-            }**/
-            
-            /**slackSend channel: '#jenkins-example',
+            }
+
+            slackSend channel: '#jenkins-example',
                 color: COLOR_MAP[currentBuild.currentResult],
-                message: "*${currentBuild.currentResult}:* Job ${env.JOB_NAME} build ${env.BUILD_NUMBER} by ${BUILD_USER}\n Tests:${SPEC} executed at ${BROWSER} \n More info at: ${env.BUILD_URL}HTML_20Report/"**/
-            
+                message: "*${currentBuild.currentResult}:* Job ${env.JOB_NAME} build ${env.BUILD_NUMBER} by ${BUILD_USER}\n Tests:${SPEC} executed at ${BROWSER} \n More info at: ${env.BUILD_URL}HTML_20Report/"
+
             publishHTML([
                 allowMissing: false,
                 alwaysLinkToLastBuild: false,
@@ -55,6 +63,5 @@ pipeline{
                 ])
             deleteDir()
         }
-    }
-
+    }**/
 }
