@@ -1,8 +1,8 @@
 {
   "valid_login_data": {
-    "password": "@Christ247Automata",
+    "password": "Digicore@2024",
     "username": "newmaker@gmail.com",
-    "welcomeMessage": "Welcome to Onafriq"
+    "loginSuccessMessage": "Login Successful"
   },
 
   "invalid_login_data": {
@@ -17,7 +17,8 @@
   },
 
   "role_data": {
-    "urlContent": "role-management/home"
+    "urlContent": "role-management/home",
+    "roleDisableSuccessMessage": "The request has been sent out for approval"
   }
   
 }

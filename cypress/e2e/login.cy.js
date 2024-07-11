@@ -2,7 +2,7 @@
 
 describe('All Login Tests', function () {
 
-    it('should login with valid username and password', function () {
+    it.only('should login with valid username and password', function () {
         cy.validLogin()
 
     })

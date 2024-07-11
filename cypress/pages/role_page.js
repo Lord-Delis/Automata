@@ -13,4 +13,11 @@ export class RolePage {
     returnRoleUrl() {
         return cy.url()
     }
+    roleDisableButton() {
+        return cy.get('.btn-primary-outline')
+        }
+    disableRoleSuccessPopup() {
+        return cy.get('.snack-content > .d-flex > :nth-child(2)')
+    }
+
 }

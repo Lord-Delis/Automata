@@ -11,12 +11,13 @@ const loginAction = new LoginPage()
 const roleAction = new RolePage()
 const cardProgramAction = new CardProgramPage()
 
+const WELCOME_MESSAGE_ALIAS = '@welcomeMessageText';
 // Login steps
 Cypress.Commands.add('validLogin', function () {
     loginAction.emailInput().type(automataData.valid_login_data.username)
     loginAction.passwordInput().type(automataData.valid_login_data.password)
     loginAction.getloginBtn().click()
-    loginAction.getWelcomeMessage().should('contain', automataData.valid_login_data.welcomeMessage)
+    loginAction.loginSuccess().should('contain', automataData.valid_login_data.loginSuccessMessage);
 })
 
 // Invalid login steps
@@ -26,15 +27,20 @@ Cypress.Commands.add('invalidLogin', function () {
     loginAction.getloginBtn().click()
     loginAction.getLoginError().should('be.visible')
     loginAction.getLoginError().should('contain', automataData.invalid_login_data.loginError)
-    //loginAction.getWelcomeMessage().should('contain', automataData.valid_login_data.welcomeMessage)
 })
 
 // View role steps
-Cypress.Commands.add('viewAllRoles', function () {
+Cypress.Commands.add('viewRoleDetails', function () {
     roleAction.navigateToRoleModule().click()
     roleAction.returnRoleUrl().should('include', automataData.role_data.urlContent)
     roleAction.roleActionBtn().click()
     roleAction.viewRoleDetails().click()
+})
+
+// Disable role
+Cypress.Commands.add('disableRole', function () {
+    roleAction.roleDisableButton().click()
+    //roleAction.disableRoleSuccessPopup().should('include', automataData.role_data.roleDisableSuccessMessage)
 })
 
 // Search card program steps

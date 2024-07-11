@@ -9,7 +9,7 @@ module.exports = defineConfig({
     viewportHeight: 720,
     defaultCommandTimeout: 20000,
     pageLoadTimeout:40000,
-    watchForFileChanges: true,
+    watchForFileChanges: false,
 
     setupNodeEvents(on, config) {
       require('cypress-mochawesome-reporter/plugin')(on);

@@ -10,8 +10,8 @@ export class LoginPage {
     getloginBtn() {
         return cy.get('.btn')
     }
-    getWelcomeMessage() {
-        return cy.get('.display-3')
+    loginSuccess() {
+        return cy.get('.snack-content > .d-flex > :nth-child(2)')
     }
     getLoginError() {
         return cy.get('.d-flex')
