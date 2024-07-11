@@ -10,7 +10,7 @@ jobs:
       - name: Execute all test cases on Electron browser
         uses: cypress-io/github-action@v6
         with:
-          browser: Electronss
+          browser: electron
 
       - name: Electron browser test result
         if: always()
