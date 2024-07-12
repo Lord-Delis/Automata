@@ -16,4 +16,8 @@ export class LoginPage {
     getLoginError() {
         return cy.get('.d-flex')
     }
+    approvalScreen() {
+        return cy.get('.pageTitle > .ng-tns-c68-2')
+    }
+
 }

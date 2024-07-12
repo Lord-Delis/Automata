@@ -1,6 +1,8 @@
 
 import './commands'
 import 'cypress-mochawesome-reporter/register';
+//import { slowCypressDown } from 'cypress-slow-down'
+//slowCypressDown()
 
 before(function () {
     cy.log('This should execute before all test cases')

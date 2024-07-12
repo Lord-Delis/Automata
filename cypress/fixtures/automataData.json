@@ -1,8 +1,11 @@
 {
   "valid_login_data": {
-    "password": "Digicore@2024",
-    "username": "newmaker@gmail.com",
-    "loginSuccessMessage": "Login Successful"
+    "makerPassword": "Digicore@2024",
+    "makerUsername": "newmaker@gmail.com",
+    "checkerPassword": "@Christ247Automata",
+    "checkerUsername": "newchecker@gmail.com",
+    "loginSuccessMessage": "Login Successful",
+    "approvalScreenMessage": "Approval Requests"
   },
 
   "invalid_login_data": {
@@ -18,7 +21,11 @@
 
   "role_data": {
     "urlContent": "role-management/home",
-    "roleDisableSuccessMessage": "The request has been sent out for approval"
+    "roleDisableSuccessMessage": "The request has been sent out for approval",
+    "approveRoleSuccessMessage": "Approved Successfully",
+    "addRoleText": "Add role details",
+    "roleDescription": "This role was created by automation"
+
   }
   
 }
